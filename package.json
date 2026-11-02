@@ -1,0 +1,20 @@
+{
+  "name": "auditor-shopify-ml",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "node ./scripts/with-node.mjs pnpm -r --parallel run dev",
+    "dev:api": "node ./scripts/with-node.mjs pnpm --filter @auditor/api dev",
+    "dev:web": "node ./scripts/with-node.mjs pnpm --filter @auditor/web dev",
+    "build": "node ./scripts/with-node.mjs pnpm -r run build",
+    "build:web": "node ./scripts/with-node.mjs pnpm --filter @auditor/web build",
+    "seed": "node ./scripts/with-node.mjs pnpm --filter @auditor/api seed",
+    "start:api": "node ./scripts/with-node.mjs pnpm --filter @auditor/api start",
+    "test": "node ./scripts/with-node.mjs pnpm --filter @auditor/api test",
+    "test:smoke": "node ./scripts/with-node.mjs node ./scripts/smoke.mjs",
+    "test:e2e": "node ./scripts/with-node.mjs pnpm --filter @auditor/web test:e2e"
+  },
+  "engines": {
+    "node": "^22.23.4 || ^24.22.1 || ^26.12.1"
+  }
+}
